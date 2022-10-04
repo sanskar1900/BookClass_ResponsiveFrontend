@@ -3,7 +3,7 @@ import Textbox from './Textbox'
 
 function Content() {
   return (
-    <div style={{height:'fitContent' , width:'fitContent',border:' ' ,backgroundColor:' #F0F8FF'}}>
+    <div style={{height:'fitContent' , width:'fitContent',border:' ' ,backgroundColor:' #F0F8FF',margin:'20px'}}>
         <div className='d-flex align-items-center justify-content-center'>
             <h1 style={{padding:'50px', fontWeight:'800', fontSize:'4rem' , fontFamily:'ubuntu', color:'rgb(46,36,36)'} } className='text-center'>Top Features of Our Courses</h1>
             

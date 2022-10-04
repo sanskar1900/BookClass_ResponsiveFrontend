@@ -2,7 +2,7 @@ import React from 'react'
 
 function Radio() {
   return (
-    <div className='d-flex'>
+    <div className='d-flex' style={{padding:'10px'}}>
       <div class="form-check">
   <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked/>
   <label className="form-check-label font-weight-bold" for="exampleRadios1">

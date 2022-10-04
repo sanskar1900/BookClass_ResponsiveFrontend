@@ -25,8 +25,12 @@
   @media only screen and (max-width: 1190px) {
     .rightdiv {
      box-shadow: 0px 0px 5px gray;
-     background-color: whitesmoke;
+     background-color: white;
+     border-radius: 10px;
   }
+  }
+  .rightdiv{
+    margin-top:  15px;
   }
   .homepage{
     display: none;

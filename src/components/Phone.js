@@ -1,13 +1,21 @@
-import React from 'react'
+import {React,useState} from 'react'
 
-function Phone() {
+function Phone(props) {
+  const [phoneno,setphoneno]=useState('');
+  const change=(e)=>{
+   setphoneno(e.target.value);
+   if(phoneno==='')props.danger(1);
+  //  else props.danger(0);
+  }
   return (
-    <div className='d-flex '>
+
+    <div className='d-flex ' style={{marginTop:'20px',padding:'10px'}}>
       <form>
-  <div class="form-group">
+      <h6  style={{ fontWeight:'600' , color:'grey'}}>Country</h6>
+  <div className="form-group d-flex">
     
-    <label htmlFor="exampleFormControlSelect1 " style={{ fontWeight:'600' , color:'grey'}}>Select Country</label>
-    <select className="form-control" id="exampleFormControlSelect1" style={{width:'100px',marginRight:'10px' , boxShadow:'2px 2px 2px grey'}}>
+    
+    <select className="form-control" id="exampleFormControlSelect1" style={{width:'100px',marginRight:'10px' , boxShadow:'2px 2px 2px grey'}} required>
     <option value="0" label="India(+91)" selected="selected">Select a country ... </option>
         {/* <optgroup id="country-optgroup-Africa" label="Africa"> */}
            <optgroup>
@@ -232,8 +240,10 @@ function Phone() {
     
     <div >
 
-      <input type="tel" className="form-control" placeholder="Enter parent contact number" style={{width:'150px',  marginTop: '25px' , boxShadow:'2px 2px 2px grey'}}/>
+      <label style={{width:'100%'}}><input onChange={change} value={phoneno} type="tel" className="form-control" placeholder="Enter parent contact number" style={{width:'100%',  marginTop: '28px' , boxShadow:'2px 2px 2px grey'}} required="required"/></label>
     </div>
+
+    
   </div>
   )
 }
